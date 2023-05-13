@@ -6,7 +6,7 @@ import random
 app = Flask(__name__)
 CORS(app)
 
-base_url = "http://go.kavcakar.com.tr"
+base_url = os.environ.get("BASE_URL", "http://localhost:5000")
 
 with sqlite3.connect("database.sqlite") as conn:
     c = conn.cursor()
