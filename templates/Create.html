@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>URL Shortener</title>
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='Create.css') }}"
+		/>
+	</head>
+	<body>
+		<main>
+			<h1>🔗 URL Shortener 🔗</h1>
+			<form action="{createURLAction}" id="form">
+				<label for="url">Enter URL:</label>
+				<input
+					type="text"
+					name="url"
+					id="url"
+					placeholder="https://my-awesome.websitse/with?long=url"
+				/>
+				<span id="shorten_container">
+					<input
+						type="text"
+						name="short"
+						id="short"
+						placeholder="/short"
+					/>
+					<button type="submit" id="shorten-btn">⚡️</button>
+				</span>
+			</form>
+			<p id="message" class="capitalize"></p>
+		</main>
+
+		<script src="{{ url_for('static', filename='Create.js') }}"></script>
+	</body>
+</html>
