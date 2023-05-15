@@ -2,11 +2,13 @@ from flask import Flask, request, render_template, send_file, redirect, url_for
 from flask_cors import CORS
 import sqlite3
 import random
-
+import os
 app = Flask(__name__)
 CORS(app)
 
-base_url = os.environ.get("BASE_URL", "http://localhost:5000")
+base_url = "http://go.kavcakar.com.tr"
+#base_url = os.environ.get("BASE_URL", "http://localhost:5000")
+print(base_url)
 
 with sqlite3.connect("database.sqlite") as conn:
     c = conn.cursor()
