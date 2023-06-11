@@ -6,7 +6,7 @@ import os
 app = Flask(__name__)
 CORS(app)
 
-base_url = "http://go.kavcakar.com.tr"
+base_url = "ENTER_BASE_URL"
 #base_url = os.environ.get("BASE_URL", "http://localhost:5000")
 print(base_url)
 
